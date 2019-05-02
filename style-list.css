@@ -1,8 +1,10 @@
 .price{
 	color: #00b32c;
 }
-.media-body img {
-    padding: 10px;
-    width: 70%;
-    max-width: 
+.media-left img {
+    max-width: 300px;
+}
+
+.media-left{
+	padding-right: 40px;
 }
