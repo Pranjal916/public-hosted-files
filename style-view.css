@@ -4,18 +4,15 @@ h3 {
 .price{
 	color: #00b32c;
 }
-.navbar.navbar-default{
-	background-color: #8C1D40;
+.title{
+	color: #8C1D40;
 }
-
-.navbar.navbar-default .navbar-brand{
-	color: #78BE20;
-}
-
-.navbar-default .navbar-nav>li>a{
+.condition{
 	color: #FFC627;
 }
-
-.navbar-right span {
-    color: #f8f8f8;
+.author{
+	color: #FF7F32;
+}
+.contact{
+	color: #5C6670;
 }
