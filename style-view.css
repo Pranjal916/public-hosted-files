@@ -1,8 +1,9 @@
 h3 {
-	text-align: center;
-	color: #78BE20;
+	color: #00A3E0;
 }
-
+.price{
+	color: #00b32c;
+}
 .navbar.navbar-default{
 	background-color: #8C1D40;
 }
