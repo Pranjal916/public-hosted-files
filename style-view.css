@@ -6,13 +6,21 @@ h3 {
 }
 .title{
 	color: #8C1D40;
+	font-style: bold;
 }
 .condition{
 	color: #FFC627;
+	font-style: bold;
 }
 .author{
 	color: #FF7F32;
+	font-style: bold;
 }
 .contact{
 	color: #5C6670;
+	font-style: bold;
+}
+
+.timeStamp{
+	color: #00A3E0;
 }
