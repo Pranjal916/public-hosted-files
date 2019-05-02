@@ -1,0 +1,15 @@
+.navbar.navbar-default{
+	background-color: #8C1D40;
+}
+
+.navbar.navbar-default .navbar-brand{
+	color: #78BE20;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: #FFC627;
+}
+
+.navbar-right span {
+    color: #f8f8f8;
+}
