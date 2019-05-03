@@ -15,17 +15,23 @@ extends ../base.pug
 
 block content
   link(rel='stylesheet', href='https://Pranjal916.github.io/public-hosted-files/style-form.css', type='text/css')
-  h3 #{action} book
+  h3 #{action} New Item Info
   form(method="POST", enctype="multipart/form-data")
     .form-group
-      label(for="title") Title
+      label(for="title") What are you selling?
       input.form-control(type="text", name="title", id="title", value=book.title)
     .form-group
-      label(for="publishedDate") Date Posted
-      input.form-control(type="text", name="publishedDate", id="publishedDate", value=book.publishedDate)
-    .form-group
-      label(for="description") Description
+      label(for="description") Description of item
       input.form-control(type="text", name="description", id="description", value=book.description)
+    .form-group
+      label(for="condition") Condition of item
+      input.form-control(type="text", name="condition", id="condition", value=book.condition)
+    .form-group
+      label(for="price") Price (in USD)
+      input.form-control(type="text", name="price", id="price", value=book.price)
+    .form-group
+      label(for="contactNumber") Contact Phone Number
+      input.form-control(type="text", name="contactNumber", id="contactNumber", value=book.contactNumber)
     .form-group
       label(for="image") Cover Image
       input.form-control(type="file", name="image", id="image")
@@ -36,7 +42,12 @@ block content
       label(for="createdBy") Created by
       input.form-control(type="text", name="createdBy", id="createdBy", value=book.createdBy)
     .form-group.hidden
+      label(for="timeStamp") timeStamp
+      input.form-control(type="text", name="timeStamp", id="timeStamp", value=book.timeStamp)
+    .form-group.hidden
+      label(for="rank") rank
+      input.form-control(type="number", name="rank", id="rank", value=book.rank)
+    .form-group.hidden
       label(for="createdById") Created by ID
       input.form-control(type="text", name="createdById", id="createdById", value=book.createdById)
-    .form-group.hidde
     button.btn.btn-success(type="submit") Save

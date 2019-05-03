@@ -14,24 +14,29 @@
 extends ../base.pug
 
 block content
-  h3 Book
+  link(rel='stylesheet', href='https://Pranjal916.github.io/public-hosted-files/style-view.css', type='text/css')
+  h3 Item Posted
     small
 
-  .btn-group
-    a(href=`/books/${book.id}/edit`, class='btn btn-primary btn-sm')
-      i.glyphicon.glyphicon-edit
-      span  Edit book
-    a(href=`/books/${book.id}/delete`, class='btn btn-danger btn-sm')
-      i.glyphicon.glyphicon-trash
-      span  Delete book
+  if profile
+    if profile.displayName == book.createdBy
+      .btn-group
+        a(href=`/items/${book.id}/edit`, class='btn btn-primary btn-sm')
+          i.glyphicon.glyphicon-edit
+          span  Edit item
+        a(href=`/items/${book.id}/delete`, class='btn btn-danger btn-sm')
+          i.glyphicon.glyphicon-trash
+          span  Delete item
 
   .media
     .media-left
       img(src=book.imageUrl || "http://placekitten.com/g/128/192")
     .media-body
-      h4= book.title
-        | &nbsp;
-        small= book.publishedDate
-      h5 By #{book.author||'unknown'}
+      h2 <span class="title">#{book.title}</span>
+        | ,&nbsp; 
+        <span class="price"> $#{book.price}</span>
+      h5 <span class="condition">Condition:</span> #{book.condition||'unknown'}
       p= book.description
-      small Added by #{book.createdBy}
+      p <span class="author">Added by:</span> #{book.createdBy}
+      p <span class="timeStamp">Date Posted:</span> #{book.timeStamp}
+      p <span class="contact">Contact number:</span> #{book.contactNumber}

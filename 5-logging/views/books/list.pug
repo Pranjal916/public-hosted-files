@@ -14,23 +14,25 @@
 extends ../base.pug
 
 block content
-  h3 Books
-
-  a(href="/books/add", class='btn btn-success btn-sm')
-    i.glyphicon.glyphicon-plus
-    span  Add book
+  link(rel='stylesheet', href='https://Pranjal916.github.io/public-hosted-files/style-list.css', type='text/css')
+  h3 Items for sale
+  p
+    a(href="/items/add", class='btn btn-success btn-sm')
+      i.glyphicon.glyphicon-plus
+      span  New item
 
   each book in books
     .media
-      a(href=`/books/${book.id}`)
+      a(href=`/items/${book.id}`)
         .media-left
-            img(src=book.imageUrl || "http://placekitten.com/g/128/192")
+          img(src=book.imageUrl || "http://placekitten.com/g/128/192")
         .media-body
-          h4= book.title
-          p= book.author
+          h3 #{book.title}
+          p <span class="price">$#{book.price}</span>
+          p Condition: #{book.condition}
 
   if !books.length
-    p No books found.
+    p No items found.
 
   if nextPageToken
     nav
